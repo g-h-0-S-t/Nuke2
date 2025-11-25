@@ -73,7 +73,7 @@ L4 -.-> L
 ## Usage
 
 1. **Install as Bookmarklet:**  
-   - Copy the minified script to a new browser bookmark.
+   - Copy the script to a new browser bookmark.
    - Allow pop-ups for the site to fully enable tab automation.
 
 2. **Activate:**  
