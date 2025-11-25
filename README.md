@@ -6,7 +6,7 @@ A High-Performance Bulk Tab Automation & Stress Testing Bookmarklet
 
 ## Introduction
 
-Nuke 2 is a browser automation utility designed for high-throughput tab/window simulation and load testing. Featuring **Automated Scroll Simulation** and **Distributed Denial-of-Service (DoS) Simulation** modes, the tool offers a polished, persistent UI with live metrics panel, action controls, and a floating log window. All interactions are powered by modern standards and ergonomic design.
+Nuke 2 is a browser automation utility designed for high-throughput tab/window simulation and load testing. Featuring **Automated Scroll Simulation** and **Denial-of-Service (DoS) Simulation** modes, the tool offers a polished, persistent UI with live metrics panel, action controls, and a floating log window. All interactions are powered by modern standards and ergonomic design.
 
 Strictly intended for legitimate testing, research, and engineering workflows.
 
