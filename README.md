@@ -20,7 +20,7 @@ Strictly intended for legitimate testing, research, and engineering workflows.
   Generates bulk tab/window openings for resource impact or stress analysis.
 - **Infinite Execution:**  
   Optionally loops tab automation for sustained workloads.
-- **Apple-like UI/UX:**  
+- **UI/UX:**  
   - Persistent side panel, dark/light themes
   - Card-based live stats
   - Large buttons, modern design
