@@ -28,7 +28,7 @@ Strictly intended for legitimate testing, research, and engineering workflows.
 
 ---
 
-## Mermaid Diagrams
+## Mermaid Diagram
 
 ```mermaid
 flowchart TD
