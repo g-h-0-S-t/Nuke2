@@ -30,33 +30,42 @@ Strictly intended for legitimate testing, research, and engineering workflows.
 
 ## Mermaid Diagrams
 
-### Scroll Simulation Flow
-
 ```mermaid
 flowchart TD
 A["Start: User Launches Nuke 2"] --> B["User Configures: Tabs, Mode, Theme"]
 B --> C{Mode Selected}
-C -->|Scroll| D["Open Tab(s)"]
-D --> E["Focus and Check DOM State"]
-E --> F["Scroll Tab to Bottom"]
-F --> G["Close Tab"]
-G --> H{More Tabs?}
-H -->|Yes| D
-H -->|No| I["Display Completion Status"]
-```
+%% Log Window Actions
+B --> L["Open Log Window"]
+L --> L1["Pause"]
+L --> L2["Resume"]
+L --> L3["Stop"]
+L --> L4["Clear Logs"]
+L --> L5["Exit"]
+L5 --> CLW["Close Log Window"]
 
-### DoS Simulation Flow
+%% Scroll Simulation Branch
+C -->|Scroll Mode| D1["Open Tab(s)"]
+D1 --> E1["Focus and Check DOM State"]
+E1 --> F1["Scroll Tab to Bottom"]
+F1 --> G1["Close Tab"]
+G1 --> H1{More Tabs?}
+H1 -->|Yes| D1
+H1 -->|No| Z["Display Completion Status"]
 
-```mermaid
-flowchart TD
-A["Start: User Launches Nuke 2"] --> B["User Configures: Tabs, Mode, Theme"]
-B --> C{Mode Selected}
-C -->|DoS| D["Open Tab(s) in Batch"]
-D --> E["Wait Random Dwell Time"]
-E --> F["Close Tab(s) Sequentially"]
-F --> G{Infinite Mode Active?}
-G -->|Yes| D
-G -->|No| H["Display Completion Status"]
+%% DoS Simulation Branch
+C -->|DoS Mode| D2["Open Tab(s) in Batch"]
+D2 --> E2["Wait Random Dwell Time"]
+E2 --> F2["Close Tab(s) Sequentially"]
+F2 --> G2{Infinite Mode Active?}
+G2 -->|Yes| D2
+G2 -->|No| Z
+
+%% Log Control Influence (can occur any time after launch)
+L1 -.-> Z
+L2 -.-> D1
+L2 -.-> D2
+L3 -.-> Z
+L4 -.-> L
 ```
 
 ---
